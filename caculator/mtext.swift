@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct mtext: View {
+struct Mtext: View {
     var value: String = "1"
     var body: some View {
         Text(value)
@@ -17,9 +17,9 @@ struct mtext: View {
     }
 }
 
-struct mtext_Previews: PreviewProvider {
+struct Mtext_Previews: PreviewProvider {
     static var previews: some View {
-        mtext()
+        Mtext()
             .background(.black)
     }
 }

@@ -7,13 +7,16 @@
 
 import SwiftUI
 
-struct mbutton: View {
+struct Mbutton: View {
     var buttonText : String = "+"
+   
     var width : CGFloat = 70
+    var actions : (Mbutton) -> Void = {_ in } //create a variable of type  void fuction
     var color: Color = Color(hue: 1.0, saturation: 0.072, brightness: 0.089)
+    var mode : calculatorModes = .notSet
     var body: some View {
         Button {
-            //perform action
+           actions(self)
         } label: {
             Text(buttonText)
                 .font(.largeTitle)
@@ -25,10 +28,11 @@ struct mbutton: View {
 
         
     }
+   
 }
 
-struct mbutton_Previews: PreviewProvider {
+struct Mbutton_Previews: PreviewProvider {
     static var previews: some View {
-        mbutton()
+        Mbutton()
     }
 }
